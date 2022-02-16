@@ -109,6 +109,9 @@ svg {
 }
 
 /* ======= NAVBAR ======= */
+header {
+  z-index: 100000;
+}
 nav {
   display: flex;
   width: 100%;
@@ -143,9 +146,11 @@ nav .brand a {
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
 }
+nav .list {
+  z-index: 9999;
+}
 nav .list a {
   color: var(--first-color-lighter);
-  z-index: 10000000000;
 }
 
 /* ======= MAIN-CONTENT ======= */
@@ -196,6 +201,7 @@ section.content .img__content {
   fill: var(--first-color);
   overflow: hidden;
   margin-top: -100px;
+  z-index: 1;
 }
 
 /* ======= SERVICE ======= */
@@ -565,6 +571,7 @@ section.contact .container__contact .form__contact .container__form-contact form
   border-radius: 0.5rem;
   border: 2px solid #ccc;
   margin-bottom: var(--mb-1-5);
+  padding: 5px;
 }
 section.contact .container__contact .form__contact .container__form-contact form textarea:focus {
   outline: none;
