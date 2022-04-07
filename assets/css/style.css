@@ -885,6 +885,9 @@ section.contact .container__contact .form__contact .container__form-contact form
     padding: 30px;
     border-radius: 0.5rem;
   }
+  section.contact .container__contact .form__contact .container__form-contact form textarea {
+    font-family: var(--font-body);
+  }
 
   /* ======= FOOTER ======= */
 }
