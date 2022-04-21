@@ -1,239 +1,553 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tugas Oxigent | Design web</title>
-    <!-- ======= MY CSS ======= -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- ======= UNICONS ======= -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  </head>
-  <body>
-    <!-- ======= HEADER ======= -->
-    <header>
-      <nav>
-        <!-- ======= BRAND ======= -->
-        <div class="brand">
-          <a href="#"> MisbahDev </a>
-        </div>
-        <!-- ======= TOGGLE ======= -->
-        <div class="toggle">
-          <input type="checkbox" name="toggle" id="toggle" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <!-- ======= LIST ======= -->
-        <ul class="list" id="list">
-          <li class="list__item"><a href="#content" class="list__link-item">About</a></li>
-          <li class="list__item"><a href="#service" class="list__link-item">Service</a></li>
-          <li class="list__item"><a href="#portfolio" class="list__link-item">Portfolio</a></li>
-          <li class="list__item"><a href="#contact" class="list__link-item">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- ======= MAIN CONTENT ======= -->
-    <section class="content" id="content">
-      <div class="section container__content">
-        <!-- ======= ABOUT ======== -->
-        <div class="about__content">
-          <h1 class="title__content">I'am Misbah</h1>
-          <span class="subtitle__content">I'am a Frontend Developer</span>
-          <span class="description">
-            <p>I am a Programmer Specialist in the Front End Developer field, converting Design into UI appearance</p>
-          </span>
-          <!-- ======= BUTTON ======== -->
-          <div class="button__content">
-            <button class="btn">Let's Talk <i class="uil uil-arrow-right icons btn-icon"></i></button>
-          </div>
-          <!-- ======= INFO-SOSMED ======== -->
-          <div class="info__sosmed-content">
-            <span class="ig__sosmed-content">
-              <i class="uil uil-instagram icons icon-content"></i>
-            </span>
-            <span class="github__sosmed-content">
-              <i class="uil uil-github icons icon-content"></i>
-            </span>
-            <span class="linkedn__sosmed-content">
-              <i class="uil uil-linkedin icons icon-content"></i>
-            </span>
-            <span class="blog__sosmed-content">
-              <i class="uil uil-rss icons icon-content"></i>
-            </span>
-          </div>
-        </div>
-        <div class="img__content">
-          <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <mask id="mask0" mask-type="alpha">
-              <path
-                d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-              />
-            </mask>
-            <g mask="url(#mask0)">
-              <path
-                d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-              />
-              <image class="home__blob-img" width="150px" x="15px" href="https://l.top4top.io/p_22228ksy91.png" />
-            </g>
-          </svg>
-        </div>
-      </div>
-    </section>
+<html class="no-js" lang="en">
+<head>
 
-    <!-- ======= SERVICE ======= -->
-    <section class="service" id="service">
-      <div class="section container__service">
-        <div class="about__service">
-          <h1 class="title">My Service</h1>
-          <div class="description">
-            <p>
-             Here are the services we can take:
-            </p>
-          </div>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Misbah Web Portfolio</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <h3 style="color: #fff;margin-top: 3px;">Misbahdevs</h3>
+            </a>
         </div>
 
-        <div class="box__service">
-          <div class="frontend__box-service">
-            <h1 class="title">
-              <i class="uil uil-arrow icons service__icon"></i>
-              Frontend Developer
-            </h1>
-            <p class="description">Yeah i'am Frontend Developer, and im ready for help you on make a website and build User Interfaces</p>
-          </div>
-          <div class="designer__box-service">
-            <h1 class="title">
-              <i class="uil uil-edit icons service__icon"></i>
-              Ui/Ux Designer
-            </h1>
-            <p class="description">Im ready for help you on make design UI/UX for website</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ======= PORTFOLIO ======= -->
-    <section class="portfolio" id="portfolio">
-      <div class="section container__portfolio">
-        <h1 class="title">My Portfolio</h1>
-        <div class="lighbox__portfolio">
-          <ul class="list__lighbox-portfolio">
-            <!-- ======== PROJECT 1 ======== -->
-            <li class="list__items-lighbox-portfolio">
-              <a href="#overlay-1" class="item__lighbox-portfolio">
-                <img src="assets/img/thumbs/1.png" alt="" class="img__item-lighbox-portfolio" />
-                <span class="title__item">Project 1</span>
-                <span class="description">CTF G7 ( CTF Ganest Seven)</span>
-              </a>
-
-              <!-- ======== OVERLAY 1 ========= -->
-              <div class="overlay-1" id="overlay-1">
-                <div class="container__overlay-1">
-                  <a href="#" class="close__overlay">
-                    <i class="uil uil-times icons icon__overlay"></i>
-                  </a>
-                  <img src="assets/img/1.JPG" alt="ctfg7" />
-                </div>
-              </div>
-            </li>
-            <!-- ======== PROJECT 2 ======== -->
-            <li class="list__items-lighbox-portfolio">
-              <a href="#overlay-2" class="item__lighbox-portfolio">
-                <img src="assets/img/thumbs/2.png" alt="" class="img__item-lighbox-portfolio" />
-                <span class="title__item">Project 2</span>
-                <span class="description">ID Techno</span>
-              </a>
-
-              <!-- ======== OVERLAY 2 ======== -->
-              <div class="overlay-2" id="overlay-2">
-                <div class="container__overlay-2">
-                  <a href="#" class="close__overlay">
-                    <i class="uil uil-times icons icon__overlay"></i>
-                  </a>
-                  <img src="assets/img/2.png" alt="ctfg7" />
-                </div>
-              </div>
-            </li>
-            <!-- ======== PROJECT 3 ======== -->
-            <li class="list__items-lighbox-portfolio">
-              <a href="#overlay-3" class="item__lighbox-portfolio">
-                <img src="assets/img/thumbs/3.png" alt="" class="img__item-lighbox-portfolio" />
-                <span class="title__item">Project 3</span>
-                <span class="description">The warriors of STTB</span>
-              </a>
-
-              <!-- ======== OVERLAY 3 ======== -->
-              <div class="overlay-3" id="overlay-3">
-                <div class="container__overlay-3">
-                  <a href="#" class="close__overlay">
-                    <i class="uil uil-times icons icon__overlay"></i>
-                  </a>
-                  <img src="assets/img/3.png" alt="ctfg7" />
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- ======= CONTACT ======= -->
-    <section class="contact" id="contact">
-      <div class="section container__contact">
-        <!-- ======= INFO CONTACT ======= -->
-        <div class="info__contact">
-          <div class="about__contact">
-            <h1>Message Me</h1>
-            <p>Punya pertanyaan? silahkan isi.</p>
-          </div>
-
-          <div class="lists__contact">
-            <ul class="list__contact">
-              <li class="items__list-contact">
-                <a href="#" class="item__list-contact"><i class="uil uil-phone icons icon__contact"></i> +6285641054319</a>
-              </li>
-              <li class="items__list-contact">
-                <a href="#" class="item__list-contact"><i class="uil uil-envelope icons icon__contact"></i> misbahx.id@gmail.com</a>
-              </li>
-              <li class="items__list-contact">
-                <a href="#" class="item__list-contact"><i class="uil uil-twitter-alt icons icon__contact"></i> SmileEveryDay</a>
-              </li>
+        <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+                <li class="current"><a class="smoothscroll" href="#intro" title="intro">Rumah</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">Tentang</a></li>
+                <li><a class="smoothscroll" href="#services" title="services">Layanan</a></li>
+                <li><a class="smoothscroll" href="#works" title="works">Portfolio</a></li>
+                <li><a class="smoothscroll" href="#contact" title="contact us">Hubungi saya</a></li>	
             </ul>
-          </div>
 
-          <div class="sosmed__contact-more">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+            <ul class="header-social">
+                <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
 
-        <!-- ======= FORM CONTACT ======= -->
-        <div class="form__contact">
-          <div class="container__form-contact">
-            <form action="#">
-              <label for="name">Your Name</label>
-              <input type="text" name="name" id="name" placeholder="..." />
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="victim@someone" />
-              <label for="pesan">Message</label>
-              <textarea name="pesan" id="pesan" cols="20" rows="5">Message..</textarea>
-              <button type="button" class="btn">Send Message</button>
-            </form>
-          </div>
+        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- intro
+    ================================================== -->
+    <section id="intro" class="s-intro target-section">
+
+        <div class="row intro-content">
+
+            <div class="column large-9 mob-full intro-text">
+                <h3>Hallo, saya Misbah</h3>
+                <h1>Seorang
+                    Web Developer <br>
+                    dan UI Designer <br>
+                </h1>
+                <a href="https://wa.me/6285641054319" class="btn btn-heros" style="background-color: #cf1767;border: 2px solid transparent;color: #fff;">Pesan Di Whatsapps</a>
+            </div>
+
+            <div class="intro-scroll">
+                <a href="#about" class="intro-scroll-link smoothscroll">
+                    Scroll untuk lebih lanjut
+                </a>
+            </div>
+
+            <div class="intro-grid"></div>
+            <div class="intro-pic"></div>
+
+        </div> <!-- end row -->
+
+    </section> <!-- end intro -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="about-me">
+
+            <div class="row heading-block" data-aos="fade-up">
+                <div class="column large-full">
+                    <h2 class="section-heading">Tentang Saya</h2>
+                </div>
+            </div>
+
+            <div class="row about-me__content" data-aos="fade-up">
+                <div class="column large-full about-me__text">
+                    <div class="image__about">
+                        <img src="images/me.jpg" alt="">
+                    </div>
+                    <p class="lead">
+                    "Banyak belajar, banyak implementasi, dan banyak client."
+                    </p>
+
+                    <p>
+                    Hai, nama saya Misbah, seorang Freelancer. Saya Lulusan SMK dan sekarang melanjutkan pedidikan di Kampus Swasta. Saya gemar belajar hal baru, apalagi yang berhubungan dengan UI Design Inovation, Software Engineer, Networking.
+                    </p>
+
+                    <p>
+                    Saya Tertarik dengan dunia Informatika khususnya di bidang Web Developer, dikarenakan dapat mencurahkan segala sesuatu yang saya pikir ke dalam codingan. Di portfolio ini kamu dapat melihat beberapa project yang sudah saya hasilkan.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row about-me__buttons">
+                <div class="column large-half tab-full" data-aos="fade-up">
+                    <a href="cv misbah.pdf" class="btn btn--primary full-width">Download CV</a>
+                </div>
+            </div>
+
+        </div> <!-- end about-me -->
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services ss-dark target-section">
+
+        <div class="shadow-overlay"></div>
+
+        <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading section-heading--centerbottom">Kemampuan</h2>
+
+                <p class="section-desc">
+                    Layanan Jasa
+                </p>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Front End Developer</h4>
+                    <p>
+                    Membuat sebuah website yang pokus di Front (depan) / tampilan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Back End Developer</h4>
+                    <p>
+                    Membuat sebuah website yang pokus di belakang, dan membuat web Statis menjadi Dinamis menggunakan bahasa pemrograman PHP.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Web Design</h4>
+                    <p>
+                    Membuat design web Interaktif, dengan beberapa Software seperti Figma, Adobe XD, Sketch.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">UI/UX Design</h4>
+                    <p>
+                    Membuat design web / Mobile Apps Interaktif, dengan beberapa Software seperti Figma, Adobe XD, Sketch.
+                    </p>
+                </div>
+            </div>
+
+            <div class="column item-service" data-aos="fade-up">
+                <div class="item-service__content">
+                    <h4 class="item-title">Mobile Design</h4>
+                    <p>
+                    Membuat design Mobile Apps Interaktif, dengan beberapa Software seperti Figma, Adobe XD, Sketch.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-    <!-- ======= FOOTER ======= -->
+
+
+    <!-- CTA
+    ================================================== -->
+    <section class="s-cta ss-dark">
+
+        <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-desc">
+                    Harga Project Berapa?
+                </h2>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="row cta-content" data-aos="fade-up">
+            <div class="column large-full">
+                <p>
+                Masalah Harga bisa dibelakang ya Kak, harga sesuai dengan susah nggaknya project tersebut. Yuk bisa ditanya tanya saja di Whatapps.
+                </p>
+
+                <a href="https://wa.me/6285641054319" class="btn full-width">Pesan di Whatapps</a>
+            </div>
+        </div> <!-- end ad-content -->
+
+    </section> <!-- end s-cta -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+
+        <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading section-heading--centerbottom">Portfolio</h2>
+                <p class="section-desc">
+                </p>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="masonry-wrap">
+
+            <div class="masonry">
+                <div class="grid-sizer"></div>
+    
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/1.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                <img src="images/portfolio/1.jpg" 
+                                     srcset="images/portfolio/1.jpg 1x, images/portfolio/1.jpg 2x" alt="">
+                            </a>    
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                        </div>
+    
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Setup
+                            </h4>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+    
+                        <div class="item-folio__caption">
+                            <p>Membuat sebuah Design Web inovasi terbaru.</p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+    
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/2.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                <img src="images/portfolio/2.jpg" 
+                                     srcset="images/portfolio/2.jpg 1x, images/portfolio/2.jpg 2x" alt="">
+                            </a>
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                        </div>
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Setup
+                            </h4>
+                            <p class="item-folio__cat">
+                                Web Design
+                            </p>
+                        </div>
+                        <div class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                            
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-beetle.jpg" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                                <img src="images/portfolio/the-beetle.jpg"
+                                     srcset="images/portfolio/the-beetle.jpg 1x, images/portfolio/the-beetle@2x.jpg 2x" alt="">
+                            </a>
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                        </div>
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                The Beetle
+                            </h4>
+                            <p class="item-folio__cat">
+                                Web Development
+                            </p>
+                        </div>
+                        <div class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/3.jpg" class="thumb-link" title="Grow Green" data-size="1050x700">
+                                <img src="images/portfolio/3.jpg" 
+                                     srcset="images/portfolio/3.jpg 1x, images/portfolio/3.jpg 2x" alt="">
+                            </a>
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                        </div>
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Minimalis
+                            </h4>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+                        <div class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                            
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="Guitarist" data-size="1050x700">
+                                <img src="images/portfolio/lamp.jpg" 
+                                     srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
+                            </a>
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                        </div>
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Lamp
+                            </h4>
+                            <p class="item-folio__cat">
+                                Web Design
+                            </p>
+                        </div>
+                        <div class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+        
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+                            
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-fuji.jpg" class="thumb-link" title="Palmeira" data-size="1050x700">
+                                <img src="images/portfolio/fuji.jpg"
+                                     srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="">
+                            </a>
+                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
+                        </div>
+                        <div class="item-folio__text">
+                            <h4 class="item-folio__title">
+                                Fuji
+                            </h4>
+                            <p class="item-folio__cat">
+                                Web Design
+                            </p>
+                        </div>
+                        <div class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </div>
+                    </div>
+                </div> <!-- end masonry__brick -->
+
+            </div> <!-- end masonry -->
+
+        </div> <!-- end masonry-wrap -->
+
+    </section> <!-- end s-work -->
+
+
+    <!-- testimonies
+    ================================================== -->
+    <section class="s-testimonials">
+    
+        <div class="row testimonials" data-aos="fade-up">
+
+            <div class="column large-full testimonials__slider">
+
+                <div class="testimonials__slide">
+                    <p>Thank you Misbahdevs, pelayanannya memuaskan, tepat waktu dan saya suka layoutnya bersih dan profesional.</p>
+                    <div class="testimonials__info">
+                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                        <cite class="testimonials__cite">
+                            <strong>Kang Yoga</strong>
+                            <span>CEO, Sunda Jaya</span>
+                        </cite>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonials__slide">
+                    <p>Saya awalnya coba buat 1 website saja, eh sekarang jadi langganan deh buat lagi dan buat lagi, karena memang waw... proses simple, dan response service nya cepet dan excellent, padahal harganya lumayan competitive banget..!!! Top Markotop lah untuk Misbahdevs...!!!</p>
+                    <div class="testimonials__info">
+                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                        <cite class="testimonials__cite">
+                            <strong>Rangga Anji</strong>
+                            <span>CEO, Google</span>
+                        </cite>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonials__slide">
+                    <p>Misbahdevs TOP BGT deh, setelah service nya cepat dan memberikan solusi yang tepat. Sukses selalu untuk Misbahdevs.</p>
+                    <div class="testimonials__info">
+                        <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonials__avatar">
+                        <cite class="testimonials__cite">
+                            <strong>Satya Nadella</strong>
+                            <span>CEO, Microsoft</span>
+                        </cite>
+                    </div>
+                </div> <!-- end testimonials__slide -->
+                
+            </div> <!-- end testimonials__slider -->
+
+        </div> <!-- end testimonials -->
+
+    </section> <!-- end s-testimonials -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact ss-dark target-section">
+
+        <div class="row heading-block" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading">Kerjasama dan Diskusi</h2>
+            </div>
+        </div>
+
+        <div class="row contact-main" data-aos="fade-up">
+            <div class="column large-full">
+                <p class="contact-email">
+                    <a href="mailto:#0">misbahx.id@gmail.com</a>
+                </p>
+
+                <p class="section-desc">
+                Saya senang terhubung, mendengarkan, dan membantu. Mari bekerja sama dan membangun sesuatu yang luar biasa. Mari ubah ide Anda menjadi produk yang lebih hebat lagi.
+                </p>
+            </div>
+        </div>
+
+        <div class="row contact-infos" data-aos="fade-up" data-aos-anchor=".contact-main">
+
+            <div class="column large-5 medium-full contact-phone">
+                <h4>Call Me</h4>
+                <a href="tel:6285641054319">+6285641054319</a>
+            </div>
+
+            <div class="column large-7 medium-full contact-social">
+                <h4>Social</h4>
+                <ul>
+                    <li><a href="#0" title="Facebook">Facebook</a></li>
+                    <li><a href="#0" title="Twitter">Twitter</a></li>
+                    <li><a href="#0" title="Instagram">Instagram</a></li>
+                </ul>
+            </div>
+
+        </div> <!-- end contact-infos -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
     <footer>
-      <div class="container__footer">
-        <p>&copy; Designed by MisbahDev</p>
-      </div>
+        <div class="row">
+            <div class="column large-full ss-copyright">
+                <span>© Copyright Misbahdevs 2022</span> 
+                <span>Design by Misbahdevs</span>
+            </div>            
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Kembali ke atas" href="#top"></a>
+            </div>
+        </div>
     </footer>
-  </body>
-</html>
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
