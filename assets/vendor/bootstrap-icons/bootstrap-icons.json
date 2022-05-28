@@ -1479,8 +1479,13 @@
   "ticket-detailed-fill": 63174,
   "ticket-detailed": 63175,
   "ticket-fill": 63176,
+<<<<<<< HEAD
+  "ticket-perferated-fill": 63177,
+  "ticket-perferated": 63178,
+=======
   "ticket-perforated-fill": 63177,
   "ticket-perforated": 63178,
+>>>>>>> 04efcac95dff6a604410f8ea44e50775d18689fe
   "ticket": 63179,
   "tiktok": 63180,
   "window-dash": 63181,
@@ -1533,6 +1538,9 @@
   "displayport-fill": 63228,
   "mortarboard-fill": 63229,
   "mortarboard": 63230,
+<<<<<<< HEAD
+  "terminal-x": 63231
+=======
   "terminal-x": 63231,
   "arrow-through-heart-fill": 63232,
   "arrow-through-heart": 63233,
@@ -1682,4 +1690,5 @@
   "filetype-json": 63377,
   "filetype-pptx": 63378,
   "filetype-xlsx": 63379
+>>>>>>> 04efcac95dff6a604410f8ea44e50775d18689fe
 }

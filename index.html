@@ -1,621 +1,853 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Misbahdevs - Portfolio Project</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link
+      rel="stylesheet"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+    />
 
-  <title>Jasa Pembuatan Website - Misbahdevs</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- ============================= UNICONS ============================= -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- ============================= MY CSS ============================= -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body id="home">
+    <div id="loader"></div>
+    <div
+      class="main"
+      style="
+        background-image: url(assets/img/hero-bg.png);
+        background-attachment: fixed;
+      "
+    >
+      <!-- ============================= HEADER ============================= -->
+      <header class="grid" id="header">
+        <navbar class="navbar padding__sisi">
+          <a href="#home" class="brand">Misbahdevs</a>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+          <div class="toggle">
+            <i class="uil uil-apps icon-togle open-nav"></i>
+          </div>
 
-  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-  <link href="assets/css/variables.css" rel="stylesheet">
+          <div class="nav-menu">
+            <ul class="lists active">
+              <li class="lists__items">
+                <i class="uil uil-estate"></i>
+                <a href="#hero-content" class="list__items">Home</a>
+              </li>
+              <li class="lists__items">
+                <i class="uil uil-user"></i>
+                <a href="#about" class="list__items">About me</a>
+              </li>
+              <li class="lists__items">
+                <i class="uil uil-file-info-alt"></i>
+                <a href="#skill" class="list__items">Skills</a>
+              </li>
+              <li class="lists__items">
+                <i class="uil uil-bag"></i>
+                <a href="#service" class="list__items">Services</a>
+              </li>
+              <li class="lists__items">
+                <i class="uil uil-image"></i>
+                <a href="#portfolio" class="list__items">Portfolio</a>
+              </li>
+              <li class="lists__items">
+                <i class="uil uil-comment-alt-message"></i>
+                <a href="#contact" class="list__items">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </navbar>
+      </header>
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top" data-scrollto-offset="0">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>MisbahDevs<span>.</span></h1>
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-
-          <li><a class="nav-link scrollto" href="#">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle d-none"></i>
-      </nav><!-- .navbar -->
-
-      <a class="btn-getstarted scrollto" href="index.html#contact">Contact</a>
-
-    </div>
-  </header><!-- End Header -->
-
-  <section id="hero-animated" class="hero-animated d-flex align-items-center">
-    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="assets/img/features-1.svg" class="img-fluid animated">
-      <h2>Selamat datang di website <span>MisbahDevs</span></h2>
-      <p>Saya menyediakan jasa pembuatan website, baik itu website Landing page / 1 halaman, Perusahaan, dan Pendidikan.</p>
-      <div class="d-flex">
-        <a href="#contact" class="btn-get-started scrollto">Hubungi via whatsapps</a>
-      </div>
-    </div>
-  </section>
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Tentang Saya</h2>
-        </div>
-
-        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-5">
-            <div class="about-img">
-              <img src="assets/img/about.jpg" class="img-fluid" alt="">
+      <!-- ============================= Hero Content ============================= -->
+      <section class="hero__content grid" id="hero-content">
+        <div class="container__hero-content padding__sisi">
+          <div class="about__content">
+            <span class="welcome">Welcome to my site</span>
+            <h2 class="name">Hi! I'm Misbah</h2>
+            <h1 class="introduce">
+              I'm <span>Web Developer </span>& <span>UI Designer</span>
+            </h1>
+            <p class="deskripsi">
+              Create your website with the services I provide. interested in
+              making, can contact me below.
+            </p>
+            <div class="button">
+              <a href="#contact" class="btnme-lg">
+                Here me <i class="uil uil-arrow-right icon-here"></i>
+              </a>
+              <a href="#portfolio" class="btnme-outline-lg">My Project</a>
             </div>
           </div>
 
-          <div class="col-lg-7">
-            <h3 class="pt-0 pt-lg-5">"Banyak belajar, banyak implementasi, dan banyak client."</h3>
+          <div class="img__hero-content">
+            <svg
+              width="611"
+              height="585"
+              viewBox="0 0 611 585"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M611 362.5C599.275 550.651 455.666 584.002 308.488 584.002C161.311 584.002 0.5 463.926 0.5 310.5C0.5 157.074 124.823 0 272 0C419.177 0 611 209.074 611 362.5Z"
+                fill="#5d18f2"
+              />
+              <path
+                d="M611 362.5C599.275 550.651 455.666 584.002 308.488 584.002C161.311 584.002 0.5 463.926 0.5 310.5C0.5 157.074 124.823 0 272 0C419.177 0 611 209.074 611 362.5Z"
+                fill="url(#pattern0)"
+              />
+              <defs>
+                <pattern
+                  id="pattern0"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_106_2"
+                    transform="translate(-0.203617) scale(0.00115253)"
+                  />
+                </pattern>
+                <image
+                  id="image0_106_2"
+                  width="1221"
+                  height="930"
+                  xlink:href="assets/img/saya.png"
+                />
+              </defs>
+            </svg>
+          </div>
 
-            <!-- Tabs -->
-            <ul class="nav nav-pills mb-3">
-              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">permulaan</a></li>
-            </ul><!-- End Tabs -->
+          <div class="sosmed">
+            <a href="https://www.linkedin.com/in/misbahlmnr/"
+              ><span><i class="uil uil-linkedin-alt icon-sosmed"></i></span
+            ></a>
+            <a href="https://twitter.com/misbahlmnr_"
+              ><span><i class="uil uil-twitter icon-sosmed"></i></span
+            ></a>
+            <a href="https://github.com/misbahdevs"
+              ><span><i class="uil uil-github icon-sosmed"></i></span
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
 
-            <!-- Tab Content -->
-            <div class="tab-content">
+    <section class="about" id="about">
+      <div class="container__about grid">
+        <h1 class="title">About Me</h1>
+        <span class="subtitle">my introduce</span>
+        <img src="assets/img/misbah.jpg" alt="" class="img__about" />
+        <div class="container__about-content">
+          <p class="deskripsi">
+            Hai, nama saya Misbah, seorang Freelancer. Saya Lulusan SMK dan
+            sekarang melanjutkan pedidikan di Kampus Swasta. Saya gemar belajar
+            hal baru, apalagi yang berhubungan dengan Web Developer, UI Design.
+            Saya Tertarik dengan dunia Informatika khususnya di bidang Web
+            Developer, dikarenakan dapat mencurahkan segala sesuatu yang saya
+            pikir ke dalam codingan. Di portfolio ini kamu dapat melihat
+            beberapa project yang sudah saya hasilkan.
+          </p>
+          <div class="experience">
+            <div>
+              <h2 class="title__experience">01+</h2>
+              <span class="subtitle__experience"
+                >Years<br />
+                Experience</span
+              >
+            </div>
+
+            <div>
+              <h2 class="title__experience">04+</h2>
+              <span class="subtitle__experience"
+                >Project<br />
+                Complete</span
+              >
+            </div>
+
+            <div>
+              <h2 class="title__experience">01+</h2>
+              <span class="subtitle__experience"
+                >Company<br />
+                Worked</span
+              >
+            </div>
+          </div>
+          <a href="assets/cv misbah.pdf" class="btnme-small">
+            Download CV <i class="uil uil-file-download-alt icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ skills =========================== -->
+    <section class="skill grid" id="skill">
+      <div class="container__skill padding__sisi">
+        <h1 class="title">Skills</h1>
+        <span class="subtitle">my technical skill</span>
+        <div class="container__skill-content">
+          <ul class="nav nav-pills">
+            <li>
+              <a href="#tab1" data-bs-toggle="pill" class="nav-link active"
+                >Frontend <i class="uil uil-angle-up icon"></i
+              ></a>
 
               <div class="tab-pane fade show active" id="tab1">
-
-                <p>Hai, nama saya Misbah, seorang Freelancer. Saya Lulusan SMK dan sekarang melanjutkan pedidikan di Kampus Swasta. Saya gemar belajar hal baru, apalagi yang berhubungan dengan : </p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Web Developer</h4>
+                <!-- html -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">HTML</span>
+                    <span class="presentasi">80%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill html"></div>
+                  </div>
                 </div>
 
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>UI Design</h4>
+                <!-- css -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">CSS</span>
+                    <span class="presentasi">70%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill css"></div>
+                  </div>
                 </div>
 
-                <br>
-                <p>Saya Tertarik dengan dunia Informatika khususnya di bidang Web Developer, dikarenakan dapat mencurahkan segala sesuatu yang saya pikir ke dalam codingan. Di portfolio ini kamu dapat melihat beberapa project yang sudah saya hasilkan.</p>
+                <!-- javascript -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">Javascript</span>
+                    <span class="presentasi">60%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill js"></div>
+                  </div>
+                </div>
 
-              </div><!-- End Tab 1 Content -->
+                <!-- react js -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">React JS</span>
+                    <span class="presentasi">50%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill react"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#tab2" data-bs-toggle="pill" class="nav-link"
+                >Backend <i class="uil uil-angle-up icon"></i
+              ></a>
 
+              <div class="tab-pane fade show" id="tab2">
+                <!-- html -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">PHP</span>
+                    <span class="presentasi">70%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill php"></div>
+                  </div>
+                </div>
+
+                <!-- css -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">Node Js</span>
+                    <span class="presentasi">50%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill node"></div>
+                  </div>
+                </div>
+
+                <!-- javascript -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">MySql</span>
+                    <span class="presentasi">80%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill mysql"></div>
+                  </div>
+                </div>
+
+                <!-- react js -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">Web API</span>
+                    <span class="presentasi">60%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill webapi"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#tab3" data-bs-toggle="pill" class="nav-link"
+                >UI Design <i class="uil uil-angle-up icon"></i
+              ></a>
+
+              <div class="tab-pane fade show" id="tab3">
+                <!-- figma -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">Figma</span>
+                    <span class="presentasi">80%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill figma"></div>
+                  </div>
+                </div>
+
+                <!-- adobe xd -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">Adobe XD</span>
+                    <span class="presentasi">70%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill adobexd"></div>
+                  </div>
+                </div>
+
+                <!-- sketch -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">Sketch</span>
+                    <span class="presentasi">60%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill sketch"></div>
+                  </div>
+                </div>
+
+                <!-- photoshop -->
+                <div class="content__skill">
+                  <div class="about__content-skill">
+                    <span class="name__skill">Photoshop</span>
+                    <span class="presentasi">50%</span>
+                  </div>
+                  <div class="pipe__skills">
+                    <div class="water__skill photoshop"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== QUALIFICATION ====================-->
+    <section class="qualification">
+      <div class="container__qualification padding__sisi">
+        <h2 class="section__title">Qualification</h2>
+        <span class="section__subtitle">My personal journey</span>
+
+        <div class="qualification__container">
+          <div class="qualification__tabs">
+            <div
+              class="qualification__button button--flex qualification__active"
+              data-target="#education"
+            >
+              <i class="uil uil-graduation-cap qualification__icon"></i>
+              Education
             </div>
 
+            <div class="qualification__button button--flex" data-target="#work">
+              <i class="uil uil-bag qualification__icon"></i>
+              Work
+            </div>
           </div>
 
-        </div>
+          <div class="qualification__sections">
+            <!--==================== QUALIFICATION CONTENT 1 ====================-->
+            <div class="qualification__content" data-content id="education">
+              <!--==================== QUALIFICATION 1 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Teknik Informatika</h3>
+                  <span class="qualification__subtitle"
+                    >Bandung - STTBandung</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-schedule"></i>
+                    2021 - Sekarang
+                  </div>
+                </div>
 
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 2 ====================-->
+              <div class="qualification__data">
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Cyber Security</h3>
+                  <span class="qualification__subtitle"
+                    >Daring - Haxor Security</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-schedule"></i>
+                    Juni 2021 - Agustus 2021
+                  </div>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 3 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">
+                    Teknik Komputer dan Jaringan
+                  </h3>
+                  <span class="qualification__subtitle"
+                    >Pangandaran - SMK Negeri 1 Cijulang</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-schedule"></i>
+                    2018 - 2021
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                </div>
+              </div>
+            </div>
+
+            <!--==================== QUALIFICATION CONTENT 2 ====================-->
+            <div class="qualification__content" data-content id="work">
+              <!--==================== QUALIFICATION 1 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Web Developer</h3>
+                  <span class="qualification__subtitle"
+                    >Freelancer - CV Sunda Jaya Corp</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-schedule"></i>
+                    Maret 2022 - Mei 2022
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 2 ====================-->
+              <div class="qualification__data">
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Pramuniaga</h3>
+                  <span class="qualification__subtitle"
+                    >Cibiru - PT. Diva Elektronik</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-schedule"></i>
+                    Maret 2022 - April 2022
+                  </div>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 3 ====================-->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Teknisi Jaringan</h3>
+                  <span class="qualification__subtitle"
+                    >Pangandaran - PT. Magazee Wira Pratama</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-schedule"></i>
+                    Seft 2020 - Des 2020
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <!-- <span class="qualification__line"></span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section><!-- End About Section -->
+    </section>
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
+    <!--==================== SERVICES ====================-->
+    <section class="services grid" id="service">
+      <div class="container__service padding__sisi">
+        <h2 class="section__title">Services</h2>
+        <span class="section__subtitle">What i over</span>
 
-        <div class="section-header">
-          <h2>Layanan Jasa</h2>
-          <p>Beberapa layanan jasa yang saya sediakan untuk anda.</p>
-        </div>
-
-        <div class="row gy-5">
-
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/services-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-activity"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Pembuatan Website Landing page</h3>
-                </a>
-                <p>Membuat sebuah website 1 halaman yang responsive dan UI Interaktif, semisal website Portfolio pribadi, ataupun Portfolio Perusahaan.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/services-2.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-broadcast"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Pembuatan Website Pendidikan</h3>
-                </a>
-                <p>Membuat sebuah website pendidikan, berupa website sekolah, ataupun website yang bertujuan untuk mengedukasi.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/services-3.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-easel"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Pembuatan Website Perusahaan</h3>
-                </a>
-                <p>Membuat sebuah website perusahaan, berupa website Penjualan, Ecomerce, Portfolio perusahaan, dan lain sebagainya.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <!-- <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/services-4.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-bounding-box-circles"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Web Design</h3>
-                </a>
-                <p>Membuat design we.</p>
-                <a href="#" class="stretched-link"></a>
-              </div>
-            </div>
-          </div> -->
-          <!-- End Service Item -->
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Harga Jasa</h2>
-          <p>Untuk harga bisa dibicarakan di whatsapps.</p>
-        </div>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item">
-
-              <div class="pricing-header">
-                <h3>Website Landing page</h3>
-                <h4><sup>Rp. </sup>??<span> / Project</span></h4>
-              </div>
-
-              <ul>
-                <li><i class="bi bi-dot"></i> <span>Responsive</span></li>
-                <li><i class="bi bi-dot"></i> <span>Tampilan Interaktif</span></li>
-                <li><i class="bi bi-dot"></i> <span>SEO</span></li>
-                <li><i class="bi bi-dot"></i> <span>performa</span></li>
-              </ul>
-
-              <div class="text-center mt-auto">
-                <a href="#contact" class="buy-btn">Pesan di whatsapps</a>
-              </div>
-
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="400">
-            <div class="pricing-item">
-
-              <div class="pricing-header">
-                <h3>Website Pendidikan</h3>
-                <h4><sup>Rp. </sup>??<span> / Project</span></h4>
-              </div>
-
-              <ul>
-                <li><i class="bi bi-dot"></i> <span>Responsive</span></li>
-                <li><i class="bi bi-dot"></i> <span>Tampilan Interaktif</span></li>
-                <li><i class="bi bi-dot"></i> <span>SEO</spa>
-                </li>
-                <li><i class="bi bi-dot"></i> <span>Aksebilitas</spa>
-                </li>
-                <li><i class="bi bi-dot"></i> <span>Konten</span></li>
-              </ul>
-
-              <div class="text-center mt-auto">
-                <a href="#contact" class="buy-btn">Pesan di whatsapps</a>
-              </div>
-
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="600">
-            <div class="pricing-item featured">
-
-              <div class="pricing-header">
-                <h3>Website Perusahaan</h3>
-                <h4><sup>Rp. </sup>??<span> / Project</span></h4>
-              </div>
-
-              <ul>
-                <li><i class="bi bi-dot"></i> <span>Responsive</span></li>
-                <li><i class="bi bi-dot"></i> <span>Tampilan Interaktif</span></li>
-                <li><i class="bi bi-dot"></i> <span>SEO</span></li>
-                <li><i class="bi bi-dot"></i> <span>Performa</span></li>
-                <li><i class="bi bi-dot"></i> <span>Aksebilitas</span></li>
-              </ul>
-
-              <div class="text-center mt-auto">
-                <a href="#contact" class="buy-btn">Pesan di whatsapps</a>
-              </div>
-
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
-    <!-- ======= F.A.Q Section ======= -->
-    <section id="faq" class="faq">
-      <div class="container-fluid" data-aos="fade-up">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-            <div class="content px-xl-5">
-              <h3>Frequently Asked <strong>Questions</strong></h3>
-              <p>
-                Beberapa pertanyaan yang sering klien tanyakan kepada saya.
-              </p>
+        <div class="services__container">
+          <!--==================== SERVICES 1 ====================-->
+          <div class="services__content">
+            <div>
+              <i class="uil uil-web-grid services__icon"></i>
+              <h3 class="services__title">Frontend<br />Developer</h3>
             </div>
 
-            <div class="accordion accordion-flush px-xl-5" id="faqlist">
+            <span
+              class="button button--flex button--small button--link services__button"
+            >
+              Lihat selengkapnya <i class="uil uil-arrow-right button__icon"></i
+            ></span>
 
-              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Berapa lama pengerjaan projectnya?
-                  </button>
-                </h3>
-                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Lama atau tidaknya pengerjaan tersebut tergantung dari project yang diambil, kalo misal project yang di ambil besar dan banyak fitur pasti lama.
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <h4 class="services__modal-title">Frontend <br />Developer</h4>
+                <i class="uil uil-times services__modal-close"></i>
 
-              <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Jika di salah satu kita ada yang melanggar apa ada sangsinya?
-                  </button>
-                </h3>
-                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Iya, nanti bakal kena sangsi sesuai surat perjanjian.
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
+                <ul class="services__modal-services">
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Membuat Website.</p>
+                  </li>
 
-              <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Apakah bisa revisi lebih dari 3 kali?
-                  </button>
-                </h3>
-                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Untuk masalah revisi, bisa di diskusikan disaat mengisi surat perjanjian, jika melebihi batas revisi, maka akan dikenakan biaya lebih.
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>
+                      Menerapkan desain responsif untuk program di semua device.
+                    </p>
+                  </li>
 
-              <!-- <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    ?
-                  </button>
-                </h3>
-                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </div>
-                </div>
-              </div> -->
-              <!-- # Faq item-->
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>
+                      Ikut merancang fitur program berbasis mobile dan device
+                      lainnya.
+                    </p>
+                  </li>
 
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>
+                      Berkolaborasi dengan back end developer dan web designer
+                      untuk melakukan usability testing.
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
-
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.png");'>&nbsp;</div>
-        </div>
+          <!--==================== SERVICES 2 ====================-->
+          <div class="services__content">
+            <div>
+              <i class="uil uil-server services__icon"></i>
+              <h3 class="services__title">Backend<br />Developer</h3>
+            </div>
 
+            <span
+              class="button button--flex button--small button--link services__button"
+            >
+              Lihat selengkapnya <i class="uil uil-arrow-right button__icon"></i
+            ></span>
+
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <h4 class="services__modal-title">Backend<br />Developer</h4>
+                <i class="uil uil-times services__modal-close"></i>
+
+                <ul class="services__modal-services">
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>
+                      Menciptakan, mengintegrasikan, dan mengelola database.
+                    </p>
+                  </li>
+
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Teknologi server web</p>
+                  </li>
+
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Menggunakan bahasa pemrograman server-side</p>
+                  </li>
+
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Integrasi API</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--==================== SERVICES 3 ====================-->
+          <div class="services__content">
+            <div>
+              <i class="uil uil-pen services__icon"></i>
+              <h3 class="services__title">UI <br />Designer</h3>
+            </div>
+
+            <span
+              class="button button--flex button--small button--link services__button"
+            >
+              Lihat selengkapnya <i class="uil uil-arrow-right button__icon"></i
+            ></span>
+
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <h4 class="services__modal-title">UI <br />Designer</h4>
+                <i class="uil uil-times services__modal-close"></i>
+
+                <ul class="services__modal-services">
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>
+                      Memvisualisasi user flow menjadi desain produk yang teruji
+                      dan indah.
+                    </p>
+                  </li>
+
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>
+                      Menyusun tata letak halaman yang ada di aplikasi dan/atau
+                      situs.
+                    </p>
+                  </li>
+
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>
+                      Mendesain interaksi setiap elemen yang ada di halaman
+                      sehingga memudahkan pengguna (user friendly).
+                    </p>
+                  </li>
+
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>
+                      Menampilkan interface dengan keseragaman yang baik dari
+                      segi warna, jenis huruf, gambar, animasi, dan lainnya.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section><!-- End F.A.Q Section -->
+    </section>
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio" data-aos="fade-up">
-
-      <div class="container">
-
-        <div class="section-header">
-          <h2>Portfolio Saya</h2>
-          <p>Beberapa hasil project tahun sekarang</p>
-        </div>
-
-      </div>
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
-
-          <ul class="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-perusahaan">Perusahaan</li>
-            <li data-filter=".filter-landingpage">Landing page</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row g-0 portfolio-container">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-perusahaan">
-              <img src="assets/img/portfolio/portfolio-1.png" class="img-fluid" alt="">
+    <section id="portfolio" class="portfolio grid">
+      <div class="container padding__sisi">
+        <h1 class="section__title">Portfolio</h1>
+        <span class="section__subtitle">project finished</span>
+        <div class="row gy-4 portfolio-container">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img
+                src="assets/img/portfolio/portfolio-1.png"
+                class="img-fluid"
+                alt=""
+              />
               <div class="portfolio-info">
-                <h4>Website Perusahaan</h4>
-                <a href="assets/img/portfolio/portfolio-1.png" title="Website perusahaan" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-landingpage">
-              <img src="assets/img/portfolio/portfolio-2.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Website langding page</h4>
-                <a href="assets/img/portfolio/portfolio-2.png" title="Website Landing page" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-perusahaan">
-              <img src="assets/img/portfolio/portfolio-3.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Website Perusahaan</h4>
-                <a href="assets/img/portfolio/portfolio-3.png" title="Website Perusahaan" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container" data-aos="fade-up">
-
-        <div class="testimonials-slider swiper">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Yoga</h3>
-                <h4>Founder &amp; Sunda Jaya</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <h4>Website Kontruksi</h4>
+                <p>website kontruksi</p>
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/portfolio-1.png"
+                    data-gallery="portfolioGallery"
+                    class="portfokio-lightbox"
+                    title="App 1"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details"
+                    ><i class="bi bi-link"></i
+                  ></a>
                 </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Mantapp website nya sangat keren, fitur juga lengkap, mantap w lah pokona mh.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Jujun Junaedi</h3>
-                <h4>CEO Sunda Jaya</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Aplikasi sangat keren. Ui Sangat interfaktif dan juga gak ngebosenin buat klik sana sininya. Mantap sukses trus lah.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Arwan Kurniawan</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Aplikasi keren sesuai keinginan. Mantap!.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-header">
-          <h2>Kirim pesan ke Misbahdevs</h2>
-          <p>Anda bisa mengirimkan pesan langsung ke whatsapps.</p>
-        </div>
-
-      </div>
-
-      <div class="container">
-
-        <div class="row gy-5 gx-lg-5">
-
-          <div class="col-lg-4">
-
-            <div class="info">
-              <h3>Informasi saya</h3>
-              <p>berikut informasinya :</p>
-
-              <div class="info-item d-flex">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h4>Lokasi:</h4>
-                  <p>Jl. Sindangsari Desa. Sindangsari Kec. Cimerak Kab. Pangandaran 46395</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h4>Email:</h4>
-                  <p>misbahx.id@gmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex">
-                <i class="bi bi-phone flex-shrink-0"></i>
-                <div>
-                  <h4>Telepon:</h4>
-                  <p>+62 856 4105 4319</p>
-                </div>
-              </div><!-- End Info Item -->
-
             </div>
-
           </div>
 
-          <div class="col-lg-8">
-            <form action="" method="post" role="form" class="php-email-form">
-              <div class="form-group mt-3">
-                <input type="text" class="form-control nama-kirim-wa" name="nama" id="nama" placeholder="nama kamu.." required>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img
+                src="assets/img/portfolio/portfolio-2.png"
+                class="img-fluid"
+                alt=""
+              />
+              <div class="portfolio-info">
+                <h4>Website Businesman</h4>
+                <p>website bisnis</p>
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/portfolio-2.png"
+                    data-gallery="portfolioGallery"
+                    class="portfokio-lightbox"
+                    title="Web 3"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details"
+                    ><i class="bi bi-link"></i
+                  ></a>
+                </div>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control pesan-kirim-wa" name="pesan" placeholder="pesan.." required></textarea>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img
+                src="assets/img/portfolio/portfolio-3.png"
+                class="img-fluid"
+                alt=""
+              />
+              <div class="portfolio-info">
+                <h4>Website Landing Page</h4>
+                <p>website landing page</p>
+                <div class="portfolio-links">
+                  <a
+                    href="assets/img/portfolio/portfolio-3.png"
+                    data-gallery="portfolioGallery"
+                    class="portfokio-lightbox"
+                    title="App 2"
+                    ><i class="bi bi-plus"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details"
+                    ><i class="bi bi-link"></i
+                  ></a>
+                </div>
               </div>
-              <div class="text-center"><button class="btn-kirim-wa" type="submit">Kirim Pesan</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== contact ========================= -->
+    <section class="contact grid" id="contact">
+      <div class="container__contact padding__sisi">
+        <h1 class="section__title">Contact</h1>
+        <span class="section__subtitle">make your message and send to me</span>
+        <div class="container__contact-content">
+          <div class="col-information">
+            <div>
+              <i class="uil uil-phone contact__icon"></i>
+              <div class="about__col-information">
+                <span class="title">Callme</span>
+                <span class="subtitle">+62-856-4105-4319</span>
+              </div>
+            </div>
+            <div>
+              <i class="uil uil-envelope-minus contact__icon"></i>
+              <div class="about__col-information">
+                <span class="title">Email</span>
+                <span class="subtitle">misbahx.id@gmail.com</span>
+              </div>
+            </div>
+            <div>
+              <i class="uil uil-map-marker contact__icon"></i>
+              <div class="about__col-information">
+                <span class="title">Address</span>
+                <span class="subtitle"
+                  >Jl. M. Toha, PLN Dalam, RT 02 RW 05 Kel. Cisereuh, Kec.
+                  Regol, Kota Bandung.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-form-message">
+            <h1>Message at Whatsapp</h1>
+            <form action="" method="POST">
+              <div>
+                <label for="username">Your name</label>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  class="nama-kirim-wa"
+                />
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  class="pesan-kirim-wa"
+                ></textarea>
+              </div>
+              <button type="button" class="btnme-small btn-kirim-wa">
+                Send message
+              </button>
             </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="footer-legal text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div class="copyright">
-            &copy; Copyright <strong><span>MisbahDevs</span></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            Designed by <a href="https://misbahdevs.github.io/">Misbah</a>
           </div>
         </div>
-
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="https://twitter.com/misbahlmnr_"class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="https://www.facebook.com/misbah.hulmunir.3990" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/misbahhlmnr_/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/misbah-dev-06b212213/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-
       </div>
-    </div>
+    </section>
 
-  </footer><!-- End Footer -->
+    <!-- ================================= footer ======================================= -->
+    <footer class="footer grid" id="footer">
+      <div class="container__footer">
+        <p>&copy; copyright misbahdevs 2022. All right reserved.</p>
+      </div>
+    </footer>
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- End Portfolio Section -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
