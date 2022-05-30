@@ -85,20 +85,25 @@ section {
 }
 
 /* ========================== loader ========================== */
+.operlay {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*opacity: 0.1;*/
+}
 #loader {
   width: 50px;
   height: 50px;
   border-radius: 100%;
   border: 5px solid #ccc;
   border-top-color: var(--title-color);
-
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-
   animation: loader 1s linear infinite;
 }
 
@@ -1223,6 +1228,11 @@ footer#footer .container__footer p {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  section#about .container__about .container__about-content .experience {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   /* =============================== skills ==================================== */
