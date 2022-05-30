@@ -28,7 +28,7 @@ const navbarLinkActive = () => {
 }
 
 // loader
-const loading = select('#loader');
+const loading = select('.operlay');
 console.log(loading)
 window.addEventListener('load', function() {
     loading.style.display = "none";
