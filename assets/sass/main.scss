@@ -1,0 +1,826 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+$primary-color: #6700ff;
+$secondary-color: #4be0f4;
+$last-color: #fc5bff;
+
+$font-body: "Poppins", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fff;
+  font-family: $font-body;
+  font-size: 16px;
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+section {
+  padding: 5em 13em;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 70% auto;
+
+  header {
+    background-color: $primary-color;
+    padding: 2em 13em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: #fff;
+    }
+    .logo {
+      font-size: 20px;
+      color: $secondary-color;
+      font-weight: 700;
+    }
+    .toggle {
+      display: none;
+    }
+    nav .toggle-close {
+      display: none;
+    }
+    nav ul {
+      display: flex;
+    }
+    li {
+      margin-right: 30px;
+    }
+  }
+
+  .social-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin-right: 10px;
+
+      a i {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.hero-content {
+  .container {
+    display: grid;
+    grid-template-columns: 70% auto;
+
+    .content {
+      background-color: $primary-color;
+      padding: 13.5em 13em;
+      color: #fff;
+
+      h1 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+      }
+      p {
+        color: $last-color;
+        margin-bottom: 20px;
+      }
+      .scroll {
+        width: 25px;
+
+        .circle {
+          animation: circleAnimate 1s infinite alternate-reverse;
+        }
+      }
+    }
+
+    .hero-design {
+      margin-top: 6em;
+      width: 100%;
+      margin-left: -49.8%;
+    }
+  }
+}
+
+@keyframes circleAnimate {
+  from {
+    transform: translate(0px, 0px);
+    z-index: 5;
+  }
+  to {
+    transform: translate(0px, 25px);
+    z-index: 5;
+  }
+}
+
+.featured {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% minmax(300px, 500px);
+  align-items: center;
+  justify-content: space-between;
+
+  .subtitle {
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .featured-title {
+    color: #000;
+    font-size: 1.8em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .featured-img-right {
+    justify-self: end;
+  }
+}
+.featured::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: $last-color;
+  opacity: 0.2;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.skills {
+  background-color: $last-color;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 400px));
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .icon-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    display: grid;
+    place-items: center;
+
+    i {
+      font-size: 1.7rem;
+      color: $primary-color;
+    }
+  }
+  .icon-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 10px;
+    left: 120px;
+    background-color: #ddd;
+  }
+  .skill-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
+
+.portfolio-project {
+  background-color: #f8f8f8;
+
+  .x-content {
+    display: grid;
+    grid-template-columns: 40% minmax(300px, 400px);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+
+    .x-content-left .subtitle {
+      color: $primary-color;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .x-content-left .featured-title {
+      color: #000;
+      font-size: 1.8em;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  .x-content:nth-child(even) {
+    grid-template-columns: minmax(300px, 400px) 40%;
+
+    .x-content-left {
+      order: 2;
+    }
+    .portfolio-img {
+      order: 1;
+    }
+  }
+}
+
+.hire-me {
+  .container {
+    min-height: 500px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+}
+
+.footer {
+  .container {
+    background-color: $primary-color;
+    padding: 2em 13em;
+    text-align: center;
+
+    p {
+      color: #fff;
+    }
+    a {
+      color: $last-color;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1285px) {
+  body {
+    font-size: 14px;
+  }
+  section {
+    padding: 5em 6.5em;
+  }
+  .nav-container {
+    header {
+      padding: 2em 6.5em;
+    }
+
+    .social-header {
+      li {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .hero-content {
+    .container {
+      .content {
+        padding: 8em 10em 8em 6.5em;
+
+        h1 {
+          font-size: 3em;
+        }
+      }
+
+      .hero-design {
+        margin-top: 2em;
+        width: 100%;
+        margin-left: -49.8%;
+      }
+    }
+  }
+
+  .hire-me {
+    .container {
+      min-height: 300px;
+    }
+  }
+
+  .footer {
+    .container {
+      padding: 2em 6.5em;
+
+      .footer-svg {
+        top: -100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 860px) and (max-width: 1024px) {
+  body {
+    font-size: 13px;
+  }
+  section {
+    padding: 5em 4em;
+  }
+  body {
+    font-size: 15px;
+  }
+  .nav-container {
+    header {
+      padding: 2em 4em;
+
+      .logo {
+        font-size: 18px;
+      }
+      li a {
+        font-size: 14px;
+      }
+    }
+
+    .social-header {
+      li {
+        margin-right: 15px;
+
+        a i {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+
+  .hero-content {
+    .container {
+      .content {
+        padding: 6em 4em;
+
+        h1 {
+          font-size: 2.8em;
+        }
+        p {
+          font-size: 14px;
+        }
+        .scroll {
+          width: 25px;
+        }
+      }
+
+      .hero-design {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .featured {
+    grid-template-columns: 40% minmax(300px, 400px);
+    .subtitle {
+      font-size: 15px;
+    }
+    .featured-title {
+      color: #000;
+      font-size: 1.5em;
+    }
+  }
+  .featured::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skills {
+    .icon-container {
+      width: 80px;
+      height: 80px;
+    }
+    .icon-container::before {
+      width: 30px;
+      height: 30px;
+    }
+    .skill-title {
+      font-size: 18px;
+    }
+  }
+
+  .portfolio-project {
+    .x-content {
+      .x-content-left .featured-title {
+        color: #000;
+        font-size: 1.5em;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+    .x-content:nth-child(even) {
+      grid-template-columns: minmax(300px, 400px) 40%;
+
+      .x-content-left {
+        order: 2;
+      }
+      .portfolio-img {
+        order: 1;
+      }
+    }
+  }
+
+  .hire-me {
+    .container {
+      min-height: 300px;
+
+      a {
+        color: $last-color;
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      padding: 2em 4em;
+    }
+  }
+}
+
+// tablet page
+@media only screen and (min-width: 768px) and (max-width: 860px) {
+  section {
+    padding: 5em 2em;
+  }
+
+  .nav-container {
+    display: unset;
+
+    header {
+      padding: 2em 2em;
+      .logo {
+        font-size: 18px;
+      }
+    }
+
+    .social-header {
+      display: none;
+    }
+  }
+
+  .hero-content {
+    .container {
+      display: unset;
+
+      .content {
+        background-color: $primary-color;
+        padding: 6em 6em 6em 6em;
+        text-align: center;
+
+        h1 {
+          font-size: 2.3em;
+        }
+        p {
+          color: $last-color;
+          margin-bottom: 20px;
+          font-size: 18px;
+        }
+      }
+
+      .hero-design {
+        display: none;
+      }
+    }
+  }
+
+  .featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .inner {
+      text-align: center;
+    }
+    .featured-title {
+      font-size: 1.5em;
+    }
+    .featured-desc {
+      margin-bottom: 30px;
+    }
+  }
+  .featured::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skills {
+    .icon-container {
+      width: 80px;
+      height: 80px;
+
+      i {
+        font-size: 1.7rem;
+      }
+    }
+    .icon-container::before {
+      top: 10px;
+      left: 110px;
+    }
+    .skill-title {
+      font-size: 18px;
+    }
+  }
+
+  .portfolio-project {
+    padding: 1em 2em 5em 2em;
+    .container .x-content {
+      display: unset;
+
+      .inner {
+        text-align: center;
+      }
+      .x-content-left .subtitle {
+        color: $primary-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        padding-top: 60px;
+      }
+      .x-content-left .featured-title {
+        color: #000;
+        font-size: 1.5em;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .x-content-left .featured-desc {
+        margin-bottom: 30px;
+      }
+    }
+    .x-content:nth-child(even) {
+      grid-template-columns: minmax(300px, 400px) 40%;
+
+      .x-content-left {
+        order: 2;
+      }
+      .portfolio-img {
+        order: 1;
+      }
+    }
+  }
+
+  .hire-me {
+    .container {
+      min-height: 300px;
+      text-align: center;
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  .footer {
+    .container {
+      padding: 6em 2em;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  section {
+    padding: 5em 0.5em;
+  }
+  .nav-container {
+    display: unset;
+    header {
+      padding: 2em 1em;
+      .logo {
+        font-size: 18px;
+      }
+      .toggle {
+        display: unset;
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 0.4em;
+        cursor: pointer;
+
+        i {
+          font-size: 1.8rem;
+          color: #fff;
+          margin-top: -4px;
+        }
+      }
+      .toggle:hover {
+        i {
+          color: $secondary-color;
+        }
+      }
+      .toggle:focus {
+        i {
+          color: $secondary-color;
+        }
+      }
+      .toggle:active {
+        i {
+          color: $secondary-color;
+        }
+      }
+      nav {
+        opacity: 0;
+        position: relative;
+        display: unset;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba($color: $primary-color, $alpha: 0.8);
+        z-index: -1;
+        padding: 20px;
+        transition: 0.4s;
+
+        ul {
+          width: 100%;
+          height: 80%;
+          background-color: #fff;
+          border-radius: 0.6rem;
+          display: flex;
+          flex-direction: column;
+          padding: 10px 10px 0px 10px;
+          margin-top: 45px;
+
+          li {
+            width: 100%;
+            padding: 1em 2em;
+            border-radius: 0.5em;
+            background-color: $primary-color;
+            margin-bottom: 10px;
+            text-align: center;
+          }
+        }
+      }
+      nav .toggle-close {
+        display: unset;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        cursor: pointer;
+
+        i {
+          font-size: 2.5em;
+          color: #fff;
+        }
+      }
+      nav .toggle-close:hover {
+        i {
+          color: $secondary-color;
+        }
+      }
+      nav.active {
+        opacity: 1;
+        z-index: 100;
+      }
+    }
+    .social-header {
+      display: none;
+    }
+  }
+  .hero-content {
+    .container {
+      display: unset;
+      .content {
+        background-color: $primary-color;
+        padding: 6em 0.5em 6em 0.5em;
+        text-align: center;
+        h1 {
+          font-size: 2.6em;
+        }
+        p {
+          color: $last-color;
+          margin-bottom: 20px;
+          font-size: 18px;
+        }
+      }
+      .hero-design {
+        display: none;
+      }
+    }
+  }
+  .featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .inner {
+      text-align: center;
+    }
+    .featured-title {
+      font-size: 1.5em;
+    }
+    .featured-desc {
+      margin-bottom: 30px;
+    }
+  }
+  .featured::before {
+    width: 200px;
+    height: 200px;
+  }
+  .skills {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: baseline;
+    }
+    li {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 0.4rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .icon-container {
+      width: 80px;
+      height: 80px;
+      i {
+        font-size: 1.7rem;
+      }
+    }
+    .icon-container::before {
+      top: 10px;
+      left: 110px;
+    }
+    .skill-title {
+      font-size: 18px;
+    }
+  }
+  .portfolio-project {
+    padding: 1em 0.5em 5em 0.5em;
+    .container .x-content {
+      display: unset;
+      .inner {
+        text-align: center;
+      }
+      .x-content-left .subtitle {
+        color: $primary-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        padding-top: 60px;
+      }
+      .x-content-left .featured-title {
+        color: #000;
+        font-size: 1.5em;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .x-content-left .featured-desc {
+        margin-bottom: 30px;
+      }
+    }
+    .x-content:nth-child(even) {
+      grid-template-columns: minmax(300px, 400px) 40%;
+      .x-content-left {
+        order: 2;
+      }
+      .portfolio-img {
+        order: 1;
+      }
+    }
+  }
+  .hire-me {
+    .container {
+      min-height: 300px;
+      text-align: center;
+      display: grid;
+      place-items: center;
+    }
+  }
+  .footer {
+    .container {
+      padding: 2em 0.5em;
+      text-align: center;
+    }
+  }
+}
